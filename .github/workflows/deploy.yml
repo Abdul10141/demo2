@@ -12,10 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Sub Stage 1.1 - Checkout Code
         uses: actions/checkout@v4
 
-      - name: Stage 1 Step
+      - name: Sub Stage 1.2 - Validate Files
+        run: echo "Validating files..."
+
+      - name: Sub Stage 1.3 - Code Formatting Check
+        run: echo "Formatting check completed"
+    steps:
+      - name: Stage1 Final Step
         run: echo "Stage 1 completed successfully"
 
   stage2:
@@ -27,6 +33,9 @@ jobs:
       - name: Stage 2 Step
         run: echo "Stage 2 completed successfully"
         #run: exit 1  # Simulating a failure here
+    steps:
+      - name: Stage2 Final Step
+        run: echo "Stage 2 completed successfully"
 
   stage3:
     name: Stage3-Final-Deploy
@@ -35,4 +44,7 @@ jobs:
 
     steps:
       - name: Stage 3 Step
+        run: echo "Stage 3 completed successfully"
+    steps:
+      - name: Stage3 Final Step
         run: echo "Stage 3 completed successfully"
