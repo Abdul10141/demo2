@@ -8,7 +8,7 @@ on:
 jobs:
 
   stage1:
-    name: Stage 1 - Checkout & Initial Task
+    name: Stage1-Checkout & Initial
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
         run: echo "Stage 1 completed successfully"
 
   stage2:
-    name: Stage 2 - Build / Process
+    name: Stage2-Build-Process
     runs-on: ubuntu-latest
     needs: stage1     # 👈 depends on stage1
 
@@ -28,7 +28,7 @@ jobs:
         run: echo "Stage 2 completed successfully"
 
   stage3:
-    name: Stage 3 - Final / Deploy
+    name: Stage3-Final-Deploy
     runs-on: ubuntu-latest
     needs: stage2     # 👈 depends on stage2
 
