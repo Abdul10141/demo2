@@ -30,9 +30,7 @@ jobs:
       - name: Stage 2 Step
         run: echo "Stage 2 completed successfully"
         #run: exit 1  # Simulating a failure here
-    steps:
-      - name: Stage2 Final Step
-        run: echo "Stage 2 completed successfully"
+    
 
   stage3:
     name: Stage3-Final-Deploy
@@ -41,7 +39,4 @@ jobs:
 
     steps:
       - name: Stage 3 Step
-        run: echo "Stage 3 completed successfully"
-    steps:
-      - name: Stage3 Final Step
         run: echo "Stage 3 completed successfully"
